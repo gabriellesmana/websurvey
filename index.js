@@ -12,3 +12,9 @@ function togglePassword() {
     }
 }
 // JavaScript untuk menangani klik pada gambar eyeicon //
+
+function validateLogin() {
+  
+    window.location.href = "home.html";
+}
+
