@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
     overflow-x: hidden;
 }
 
@@ -17,6 +18,12 @@ body {
 }
 
 @media (max-width: 767px) {
+
+    body {
+        background: url('src/img/layar\ hp.png') center center no-repeat;
+        background-size: cover;
+    }
+
     #login {
         margin: -100px 10px 0 10px; /* Sesuaikan dengan nilai yang diinginkan */
         padding: 20px 30px;
@@ -29,16 +36,16 @@ body {
     width: 100%;
     max-width: 500px;
     border-radius: 5px;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     align-items: center;
-    margin: 0 auto 20px;
+    margin: 0 auto 12px;
     border: 1px solid #ccc;
 }
 
 .input-box input {
     width: calc(100% - 40px);
-    padding: 10px;
+    padding: 5px;
     border: 0;
     outline: none;
     font-size: 16px;
@@ -51,6 +58,8 @@ body {
     margin-left: 10px;
     cursor: pointer;
 }
+
+
 
 /* Menambahkan style untuk input yang disentuh */
 .input-box:hover {
