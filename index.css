@@ -1,0 +1,90 @@
+body {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#login {
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+@media (max-width: 767px) {
+    #login {
+        margin: 10px;
+        padding: 20px 30px;
+    }
+}
+
+.input-box {
+    position: relative;
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 10px;
+    border: 1px solid #ccc;
+}
+
+.input-box input {
+    position: relative;
+    width: 100%;
+    padding: 8px 15px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    color: #555;
+}
+
+.input-box img {
+    width: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input-box p {
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    transition: 0.2s ease-out;
+}
+
+.input-box input:focus + p,
+.input-box input:not(:placeholder-shown) + p {
+    top: 5px;
+    font-size: 12px;
+    opacity: 1;
+}
+
+#login h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.d-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+}
+
+.btn-primary {
+    width: calc(100% - 35px);
+    margin: 0 auto;
+}
