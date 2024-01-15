@@ -1,16 +1,18 @@
 <?php
+
+
 $servername = "localhost";
 $database = "web_survey";
 $username = "root";
 $password = "";
 
-
 // Membuat koneksi
-$conn = new mysqli($servername,$database, $username, $password);
+$conn = mysqli_connect ($servername, $database, $username, $password);
 
 // Memeriksa koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+} else {
+    echo "Koneksi Berhasil";
 }
-echo "Koneksi berhasil!";
 ?>

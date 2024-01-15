@@ -16,10 +16,11 @@
             <h1>Silahkan Daftar</h1>
         </div>
     </div>
+ <form action="registrasi.php" method="POST">
     <div class="row">
         <div class="col">
             <div class="input-box">
-                <input type="text" placeholder="*Nama" id="username" required>
+                <input type="text" placeholder="*Nama" id="username" name="username">
                 <div class="invalid-feedback" id="usernameError">Nama tidak boleh kosong</div>
             </div>
         </div>
@@ -27,7 +28,7 @@
     <div class="row">
         <div class="col">
             <div class="input-box">
-                <input type="text" placeholder="*Nomor KK" id="nomorkk" required>
+                <input type="text" placeholder="*Nomor KK" id="nomorkk" name="nomorkk" required>
                 <div class="invalid-feedback" id="nomorkkError">Nomor KK tidak boleh kosong</div>
             </div>
         </div>
@@ -35,7 +36,7 @@
     <div class="row">
         <div class="col">
             <div class="input-box">
-                <input type="text" placeholder="*NIK" id="nik" required>
+                <input type="text" placeholder="*NIK" id="nik" name="nik" required>
                 <div class="invalid-feedback" id="nikError">NIK tidak boleh kosong</div>
             </div>
         </div>
@@ -43,19 +44,18 @@
     <div class="row">
         <div class="col">
             <div class="input-box">
-                <input type="password" placeholder="*Password" id="password" required>
-                <img src="/src/img/view.png" id="eyeicon" onclick="togglePassword()">
+                <input type="password" placeholder="*Password" id="password" name="password" required>
+                <img src="src/img/view.png" id="eyeicon" onclick="togglePassword()">
                 <div class="invalid-feedback" id="passwordError">Password tidak boleh kosong</div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <div class="d-grid">
-                <button type="button" class="btn btn-primary" onclick="validateLogin()">Daftar</button>
-            </div>
+            <button type="button" name="simpan">Simpan</button>
         </div>
     </div>
+ </form>
 </section>
 
     <!-- JAVASCRIPT BOOTSTRAP -->
