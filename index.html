@@ -1,85 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap demo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
 
-<!-- BAGIAN LOGIN -->
-<section id="login" class="container">
-    <div class="row">
-        <div class="col">
-            <h1>Silahkan Login</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="input-box">
-                <input type="text" placeholder="*Username" id="username" oninput="handleInput(this)">
-                <p for="username">*Username</p>
+    <!-- BAGIAN LOGIN -->
+    <section id="login" class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Silahkan Login</h1>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="input-box">
-                <input type="password" placeholder="*Password" id="password" oninput="handleInput(this)">
-                <p for="password">*Password</p>
-                <img src="src/img/view.png" id="eyeicon" onclick="togglePassword()">
+        <div class="row">
+            <div class="col">
+                <div class="input-box">
+                    <input type="text" placeholder="*Username" id="username" required>
+                    <div class="invalid-feedback" id="usernameError">Username tidak boleh kosong</div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="d-grid">
-                <button type="button" class="btn btn-primary">Login</button>
+        <div class="row">
+            <div class="col">
+                <div class="input-box">
+                    <input type="password" placeholder="*Password" id="password" required>
+                    <img src="src/img/view.png" id="eyeicon" onclick="togglePassword()">
+                    <div class="invalid-feedback" id="passwordError">Password tidak boleh kosong</div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+        <div class="row">
+            <div class="col">
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary" onclick="validateLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- JAVASCRIPT BOOTSTRAP -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-<!-- AKHIR JAVASCRIPT BOOTSTRAP -->
+    <!-- JAVASCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <!-- AKHIR JAVASCRIPT BOOTSTRAP -->
 
-<!-- JavaScript untuk menangani klik pada gambar eyeicon -->
-<script>
-    function togglePassword() {
-        var passwordField = document.getElementById("password");
-        var eyeIcon = document.getElementById("eyeicon");
+    <!-- JavaScript untuk menangani klik pada gambar eyeicon -->
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var eyeIcon = document.getElementById("eyeicon");
 
-        if (passwordField.type === "password") {
-            passwordField.type = "text";
-            eyeIcon.src = "src/img/hide.png"; // Ganti sumber gambar sesuai kebutuhan
-        } else {
-            passwordField.type = "password";
-            eyeIcon.src = "src/img/view.png"; // Ganti sumber gambar sesuai kebutuhan
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.src = "src/img/hide.png"; // Ganti sumber gambar sesuai kebutuhan
+            } else {
+                passwordField.type = "password";
+                eyeIcon.src = "src/img/view.png"; // Ganti sumber gambar sesuai kebutuhan
+            }
         }
-    }
 
-    function handleInput(input) {
-        var label = input.nextElementSibling; // Pilih elemen berikutnya (sibling)
 
-        if (input.value.trim() !== "") {
-            label.style.top = "5px";
-            label.style.fontSize = "12px";
-            label.style.color = "#333";
-            label.style.opacity = "1";
-        } else {
-            label.style.top = "20px";
-            label.style.fontSize = "16px";
-            label.style.color = "white"; /* Mengubah warna teks menjadi putih */
-            label.style.opacity = "0.7";
-        }
-    }
-</script>
+    </script>
 
-</body>
-</html>
-    
+    </body>
+    </html>
