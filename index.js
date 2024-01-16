@@ -18,3 +18,5 @@ function validateLogin() {
     window.location.href = "home.html";
 }
 
+
+
