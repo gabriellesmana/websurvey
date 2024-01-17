@@ -1,5 +1,7 @@
 body {
-    background-color: #3498db;
+    background: linear-gradient(rgba(52, 152, 219, 0.8), rgba(52, 152, 219, 0.8)), 
+    url(src/img/desktop1.jpg);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,25 +12,25 @@ body {
 }
 
 
-
 #login {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 10px;
     max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 @media (max-width: 767px) {
-
     body {
         background: url('src/img/layar\ hp.png') center center no-repeat;
         background-size: cover;
     }
 
     #login {
-        margin: -100px 10px 0 10px; /* Sesuaikan dengan nilai yang diinginkan */
-        padding: 20px 30px;
+        margin: -32px 16px 0 16px; /* Sesuaikan dengan nilai yang diinginkan dalam pixel */
+        padding: 16px; /* Sesuaikan dengan nilai yang diinginkan dalam pixel */
     }
 }
 
@@ -42,7 +44,7 @@ body {
     display: flex;
     align-items: center;
     margin: 0 auto 12px;
-    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .input-box input {
@@ -52,7 +54,7 @@ body {
     outline: none;
     font-size: 16px;
     color: #555;
-    transition: border-color 0.3s; /* Menambahkan efek transisi pada warna border */
+    transition: border-color 0.3s;
 }
 
 .input-box img {
@@ -61,27 +63,32 @@ body {
     cursor: pointer;
 }
 
-
-
-/* Menambahkan style untuk input yang disentuh */
 .input-box:hover {
-    border: 1px solid #ff0000; /* Warna merah saat input disentuh */
+    border: 1px solid  #3498db;
 }
 
 #login h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 35px; /* Sesuaikan dengan nilai yang diinginkan dalam pixel */
+    font-family: 'Overpass', sans-serif;
+    margin-top: 25px;
+    margin-bottom: 50px;
     color: #333;
 }
 
 .d-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
-    text-align: center;
+    gap: 8px; /* Sesuaikan dengan nilai yang diinginkan dalam pixel */
 }
 
 .btn-primary {
     width: 100%;
+    font-size: 18px; /* Sesuaikan dengan nilai yang diinginkan dalam pixel */
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.btn-primary:hover {
+    background-color: #297fb8;
+    border-color: #297fb8;
 }

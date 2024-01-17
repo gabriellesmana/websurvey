@@ -36,6 +36,39 @@ body {
     }
 }
 
+.input-box {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input {
+    width: calc(100% - 40px);
+    padding: 5px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s;
+}
+
+.input-box img {
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input-box:hover {
+    border: 1px solid  #3498db;
+}
+
 .select-box {
     position: relative;
     width: 100%;
@@ -46,8 +79,10 @@ body {
 }
 
 #survey h1 {
-    font-size: 28px;
-    margin-bottom: 30px;
+    font-family: 'Overpass', sans-serif;
+    font-size: 35px;
+    margin-top: 25px;
+    margin-bottom: 50px;
     color: #333;
 }
 
