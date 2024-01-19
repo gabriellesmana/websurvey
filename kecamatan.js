@@ -21,3 +21,8 @@ function updateKecamatanOptions() {
         kecamatanSelect.add(option);
     }
 }
+
+function validateLogin() {
+  
+    window.location.href = "suratsuara.html";
+}
