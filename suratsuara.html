@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">    
+
+    <link rel="stylesheet" href="suratsuara.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <!-- SURAT SUARA -->
+
+    <section id="suratsuara" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1 style="text-align: center; margin-bottom: 50px;">TEST</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="ballot">
+                        <div class="header">
+                            <h2>GERINDRA</h2>
+                        </div>
+                        <div class="candidates">
+                            <!-- Kandidat 1 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_gerindra" class="checkbox"
+                                        onchange="selectCandidate(1, 'gerindra')">
+                                    Nama Kandidat 1
+                                </label>
+                            </div>
+                            <!-- Kandidat 2 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_gerindra" class="checkbox"
+                                        onchange="selectCandidate(2, 'gerindra')">
+                                    Nama Kandidat 2
+                                </label>
+                            </div>
+                            <!-- Kandidat 3 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_gerindra" class="checkbox"
+                                        onchange="selectCandidate(3, 'gerindra')">
+                                    Nama Kandidat 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="ballot">
+                        <div class="header">
+                            <h2>GOLKAR</h2>
+                        </div>
+                        <div class="candidates">
+                            <!-- Kandidat 1 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_golkar" class="checkbox"
+                                        onchange="selectCandidate(1, 'golkar')">
+                                    Nama Kandidat 1
+                                </label>
+                            </div>
+                            <!-- Kandidat 2 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_golkar" class="checkbox"
+                                        onchange="selectCandidate(2, 'golkar')">
+                                    Nama Kandidat 2
+                                </label>
+                            </div>
+                            <!-- Kandidat 3 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_golkar" class="checkbox"
+                                        onchange="selectCandidate(3, 'golkar')">
+                                    Nama Kandidat 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="ballot">
+                        <div class="header">
+                            <h2>PSI</h2>
+                        </div>
+                        <div class="candidates">
+                            <!-- Kandidat 1 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_psi" class="checkbox"
+                                        onchange="selectCandidate(1, 'psi')">
+                                    Nama Kandidat 1
+                                </label>
+                            </div>
+                            <!-- Kandidat 2 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_psi" class="checkbox"
+                                        onchange="selectCandidate(2, 'psi')">
+                                    Nama Kandidat 2
+                                </label>
+                            </div>
+                            <!-- Kandidat 3 -->
+                            <div class="candidate">
+                                <label>
+                                    <input type="radio" name="candidate_psi" class="checkbox"
+                                        onchange="selectCandidate(3, 'psi')">
+                                    Nama Kandidat 3
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+   <!-- SweetAlert2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="suratsuara.js"></script>
+
+</body>
+
+</html>
